@@ -9,7 +9,7 @@ const conteudoSecreto = document.getElementById("conteudo-secreto");
 const btnNotificacao = document.getElementById("btn-notificacao");
 
 // Definição da data final
-const dataFinal = new Date("Oct 14, 2025 23:19:00").getTime();
+const dataFinal = new Date("Oct 14, 2025 23:30:00").getTime();
 
 // =======================================================
 //     PARTE 2: LÓGICA DAS NOTIFICAÇÕES (FIREBASE)
@@ -80,4 +80,5 @@ const intervalo = setInterval(function() {
         // Adiciona a classe para ativar a animação de fade-in
         conteudoSecreto.classList.add("revelado"); 
     }
+
 }, 1000);
