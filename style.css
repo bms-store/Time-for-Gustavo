@@ -1,0 +1,123 @@
+/* --- Importando uma fonte moderna do Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto+Mono:wght@700&display=swap');
+
+/* --- Variáveis de Cor (facilita a customização) --- */
+:root {
+    --cor-fundo: #f4f7f6;
+    --cor-container: #ffffff;
+    --cor-primaria: #0056b3; /* Um azul mais sóbrio */
+    --cor-destaque: #d9534f; /* Um vermelho/laranja para o timer */
+    --cor-sucesso: #5cb85c; /* Verde para o botão */
+    --cor-texto: #333333;
+    --sombra: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Estilos Gerais --- */
+body {
+    font-family: 'Poppins', sans-serif; /* Usando a nova fonte */
+    background-image: linear-gradient(120deg, #eef2f3 0%, var(--cor-fundo) 100%);
+    color: var(--cor-texto);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* --- Container Principal --- */
+.container {
+    padding: 40px 50px;
+    background-color: var(--cor-container);
+    border-radius: 12px;
+    box-shadow: var(--sombra);
+    width: 100%;
+    max-width: 600px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+h1 {
+    font-size: 2.2em;
+    color: var(--cor-primaria);
+    margin-bottom: 25px;
+}
+
+/* --- Novo Estilo do Temporizador --- */
+#temporizador {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espaço entre as caixas */
+    margin: 30px 0;
+}
+
+.tempo-bloco {
+    display: flex;
+    flex-direction: column;
+}
+
+.tempo-bloco span:first-child {
+    font-family: 'Roboto Mono', monospace; /* Fonte monoespaçada para os números */
+    font-size: 3em;
+    font-weight: 700;
+    color: var(--cor-destaque);
+    background-color: #f1f1f1;
+    padding: 10px 15px;
+    border-radius: 8px;
+    min-width: 60px; /* Garante que os blocos não mudem de tamanho */
+}
+
+.tempo-bloco span:last-child {
+    font-size: 0.8em;
+    text-transform: uppercase;
+    color: #888;
+    margin-top: 8px;
+}
+
+/* --- Estilos do Conteúdo Secreto e Botões --- */
+#conteudo-secreto {
+    display: none; /* Mantém escondido por padrão */
+}
+
+/* Animação de Fade-in */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.revelado {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+#conteudo-secreto a,
+#btn-notificacao {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#conteudo-secreto a {
+    background-color: var(--cor-primaria);
+    margin-top: 15px;
+}
+
+#btn-notificacao {
+    background-color: var(--cor-sucesso);
+    font-size: 1em;
+}
+
+#conteudo-secreto a:hover,
+#btn-notificacao:hover {
+    transform: scale(1.05);
+}

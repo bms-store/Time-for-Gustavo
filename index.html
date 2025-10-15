@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surpresa a Caminho!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div id="container-temporizador">
+            <h1>O conteúdo será liberado em:</h1>
+<div id="temporizador">
+    <div class="tempo-bloco">
+        <span id="dias">0</span>
+        <span>Dias</span>
+    </div>
+    <div class="tempo-bloco">
+        <span id="horas">0</span>
+        <span>Horas</span>
+    </div>
+    <div class="tempo-bloco">
+        <span id="minutos">0</span>
+        <span>Minutos</span>
+    </div>
+    <div class="tempo-bloco">
+        <span id="segundos">0</span>
+        <span>Segundos</span>
+    </div>
+</div>
+
+            <button id="btn-notificacao">🔔 Ativar notificações</button>
+
+        </div>
+
+        <div id="conteudo-secreto">
+            <h1>A espera acabou!</h1>
+            <p>Aqui está o seu conteúdo especial:</p>
+            <ul>
+                <li><a href="URL_DA_PASTA_AQUI" target="_blank">Acesso à pasta com os arquivos</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-messaging.js"></script>
+    <script>
+        // Seu código de configuração (está correto)
+        const firebaseConfig = {
+            apiKey: "AIzaSyC7-G7JwuortDrhqkSDMusso9KspBBWmk1Q",
+            authDomain: "bmsa-9e74e.firebaseapp.com",
+            projectId: "bmsa-9e74e",
+            storageBucket: "bmsa-9e74e.appspot.com",
+            messagingSenderId: "43400942405",
+            appId: "1:43400942405:web:fa21f5787940d8dbfee42c",
+            measurementId: "G-6QZ9L02R2B"
+        };
+        // Inicialização do Firebase (está correto)
+        firebase.initializeApp(firebaseConfig);
+        const messaging = firebase.messaging();
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
