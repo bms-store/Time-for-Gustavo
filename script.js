@@ -10,7 +10,7 @@ const conteudoSecreto = document.getElementById("conteudo-secreto");
 // const btnNotificacao = document.getElementById("btn-notificacao");
 
 // Definição da data final do temporizador (ajuste como precisar)
-const dataFinal = new Date("Nov 17, 2025 23:10:00").getTime();
+const dataFinal = new Date("Out 20, 2025 08:43:00").getTime();
 
 
 // =======================================================
@@ -43,4 +43,5 @@ const intervalo = setInterval(function() {
         conteudoSecreto.classList.add("revelado"); 
     }
 }, 1000);
+
 
