@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surpresa a Caminho!</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Script de inicialização do OneSignal -->
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script>
+      window.OneSignalDeferred = window.OneSignalDeferred || [];
+      OneSignalDeferred.push(function(OneSignal) {
+        OneSignal.init({
+          // ✅ CORREÇÃO: Coloquei o seu App ID real que usamos antes.
+          appId: "55af792d-68a9-41b1-8684-33a937559283",
+        });
+      });
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <div id="container-temporizador">
+            <h1>O conteúdo será liberado em:</h1>
+            
+            <div id="temporizador">
+                <div class="tempo-bloco">
+                    <span id="dias">0</span>
+                    <span>Dias</span>
+                </div>
+                <div class="tempo-bloco">
+                    <span id="horas">0</span>
+                    <span>Horas</span>
+                </div>
+                <div class="tempo-bloco">
+                    <span id="minutos">0</span>
+                    <span>Minutos</span>
+                </div>
+                <div class="tempo-bloco">
+                    <span id="segundos">0</span>
+                    <span>Segundos</span>
+                </div>
+            </div>
+
+            <!-- ✅ AJUSTE: O botão não é necessário, o OneSignal é automático. 
+                 Removi ele para evitar confusão. -->
+        </div>
+
+        <div id="conteudo-secreto">
+            <h1>A espera acabou!</h1>
+            <p>Aqui está o seu conteúdo especial:</p>
+            <ul>
+                <li><a href="https://docs.google.com/document/d/1OteZEn1EYHGYmqF3Ij672C0PdzlqD5Y_/edit?usp=drive_link&ouid=116033453548455611435&rtpof=true&sd=true" target="_blank">Acesso à pasta com os arquivos</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
